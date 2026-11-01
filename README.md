@@ -160,5 +160,5 @@ git push -u origin main
 ---
 
 ## 10. Live Deployment URL
-**Not Applicable** (This is a local development laboratory assignment).
+- **Live Vercel URL:** [https://lab-report-1-qzyx-i8ch514zf-abhi2-clouds-projects.vercel.app/](https://lab-report-1-qzyx-i8ch514zf-abhi2-clouds-projects.vercel.app/)
 
