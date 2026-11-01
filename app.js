@@ -44,8 +44,14 @@ app.use((req, res) => {
   res.status(404).send('404 - Page Not Found');
 });
 
-// Start the server using app.listen(3000)
-app.listen(PORT, () => {
-  console.log(`Express server is running on http://localhost:${PORT}`);
-});
+// Start the server only if run directly (allows Vercel serverless export)
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Express server is running on http://localhost:${PORT}`);
+  });
+}
+
+// Export app for serverless platforms like Vercel
+module.exports = app;
+
 
